@@ -1,0 +1,291 @@
+/* Base styles */
+body {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 20%; /* Fixed width */
+    height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.contact-icons {
+    margin: 10px 0;
+}
+
+.contact-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-icons img {
+    width: 30px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.main-content {
+    padding: 20px;
+    width: 60%;
+    margin-left: 250px; /* Offset for sidebar */
+    flex-grow: 1; /* Takes up remaining space */
+}
+
+
+.main-content section {
+    margin-bottom: 20px;
+}
+
+.timeline {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 20%; /* Adjust the width as needed */
+    height: 100vh;
+    overflow-y: auto;
+    background: #f9f9f9; /* Or any color that fits the design */
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Adjustments for larger screens */
+@media screen and (min-width: 768px) {
+    body {
+        flex-direction: row;
+    }
+
+    .sidebar,
+    .main-content {
+        flex: 1;
+        margin: 0;
+    }
+
+    .sidebar {
+        width: 15%; /* Fixed sidebar width */
+        height: 100vh; /* Full viewport height */
+        max-width: 20%;
+        position: fixed;
+        overflow-y: auto;
+    }
+    .timeline{
+        max-width: 20%;
+    }
+
+    .main-content {
+        margin-left: 20%; /* Margin to account for sidebar */
+        width: 40%; /* Adjust width for the main content */
+        max-width: 50%; /* Optional max width for readability */
+        margin-right: auto;
+    }
+
+    .contact-icons {
+        margin-left: 20px;
+        justify-content: center;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .contact-icons a {
+        margin-right: 10px;
+    }
+    
+    .contact-icons a:hover img {
+        opacity: 0.8; /* Slight transparency on hover */
+    }
+
+    #about ul {
+        padding: 0;
+        list-style-type: disc;
+        margin-left: 20px; 
+    }
+    #about li {
+        margin-bottom: 10px; /* Adds space between list items */
+    }
+}
+
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar, .main-content, .timeline {
+        width: 100%; /* Full width for all components */
+        margin: 0; /* Remove margins */
+        position: static; /* Disable fixed positioning */
+    }
+
+    .sidebar {
+        order: 1; /* Sidebar first */
+    }
+
+    .main-content {
+        order: 2; /* Main content second */
+    }
+
+    .timeline {
+        order: 3; /* Timeline last */
+    }
+}
+/* Hover effects for links */
+a:hover {
+    opacity: 0.7;
+}
+
+/* Responsive typography */
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* Responsive list items */
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+ul li strong {
+    font-weight: bold;
+}
+
+/* Responsive navbar */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    padding: 5px 20px;
+    display: block;
+    text-decoration: none;
+}
+
+/* Mobile specific styles */
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+    ul {
+        padding: 0;
+        list-style-type: disc;
+    }
+
+    p, li {
+        font-size: 0.9rem;
+    }
+
+    .profile-pic {
+        width: 80px; /* Smaller profile picture for mobile */
+        height: 80px;
+    }
+
+    .contact-icons img {
+        width: 24px; /* Smaller icons for mobile */
+    }
+    .timeline {
+        flex-direction: row;
+    }
+}
+
+
+
+.timeline-item {
+    border-left: 4px solid #333; /* Or any color you prefer */
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.timeline-item h3 {
+    font-size: 1.2em;
+}
+
+.timeline-item p {
+    font-size: 1em;
+}
+
+#skills {
+    margin-bottom: 20px;
+}
+
+#skills h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+#skills h3 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+#skills ul {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+#skills li {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+#conferences, #publications {
+    margin-bottom: 20px;
+}
+
+#conferences h2, #publications h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+#conferences ul, #publications ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+#conferences li, #publications li {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+#conferences a, #publications a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+#conferences a:hover, #publications a:hover {
+    text-decoration: underline;
+}

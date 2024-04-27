@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saimir Baci - Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="/static/images/profile.jpg" alt="Saimir Baci Profile" class="profile-pic">  <!-- Image tag added -->
+        <h1>Saimir Baci</h1>
+        <div class="contact-icons">
+            <a href="mailto:saimirbaci@hotmail.com" target="_blank">
+                <img src="/static/images/email.png" alt="Email">
+            </a>
+            <a href="https://www.linkedin.com/in/saimir-baci/" target="_blank">
+                <img src="/static/images/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="http://github.com/saimirbaci" target="_blank">
+                <img src="/static/images/github.png" alt="Website">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">Intro</a></li>
+                <li><a href="#skills">Skills and Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#conferences">Conferences</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#blog">Blog Info</a></li>
+                <li><a href="/static/Resume.pdf" target="_blank">Extensive Resume</a></li>
+                <li><a href="https://chat.openai.com/g/g-xFUpy7S2f-personalgpt" target="_blank">ChatGpt Me</a></li>
+                <!-- <li><a href="/timeline.html">Timeline</a></li> -->
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am an international engineer and applied researcher with a passion for technology.</p>
+            <ul>
+                <li>Currently Researching and Consulting in the field of LLMs and Agent Development</li>
+                <li>Was Manager at Avidbots, leading the Advanced Technology Group focused on robotic innovations.</li>
+                <li>Led supply chain and optimization projects usign ML at Ivado Labs.</li>
+                <li>Significant role in product development and prototype testing at Volvo's research department.</li>
+                <li>Contributed to research papers and patents in autonomous vehicle technologies.</li>
+                <li>Involved in collaborations with known research institutions such as the Vector Institute, University of Waterloo, and University of Toronto, Chalmers and Vinnova.</li>
+                <li>Lived in 4 different countries: <strong>Albania, Italy, Sweden, Canada</strong>, and traveled for work/leisure in 37 different ones.</li>
+                <li>Enjoy travelling, soccer, chess, eating good food, and cooking.</li>
+            </ul>
+        </section>
+        <section id="blog">
+            <h2>Blog Info</h2>
+            <p>Here you will find my thoughts and insights on various technology topics.</p>
+        </section>
+        <section id="experience">
+            
+            <h2>Experience</h2>
+            <div experience_html="experience.html"></div>
+        </section>
+        <section id="skills">
+            <div skills_html="skills.html"></div>
+ 
+        </section>
+        <section id="conferences">
+            <h2>Conferences</h2>
+            <ul>
+                <li>January 2020 - IAEA - Emerging Technologies Workshop: Invited as a Subject Matter Expert on Deep Learning for safety critical systems. <a href="https://www.iaea.org/sites/default/files/20/06/emerging-tehnologies-workshop-290120.pdf">Workshop Details</a></li>
+                <li>December 2019 - ICMLA - Presented Paper on Deep Neural Network Compression for Image Classification and Object Detection. <a href="https://www.icmla-conference.org/icmla19/">Conference Details</a></li>
+                <li>October 2018 - GITEX - Dubai Huawei Innovation Day: Speaker on "How AI is shaping the automotive industry?"</li>
+                <li>September 2018 - Auto.AI - Berlin World Caffe Session: Panel Speaker on challenges of using deep learning for autonomous software stacks.</li>
+                <li>July 2018 - IJCAI-ECAI Stockholm - Autonomous Driving Panel: "Will we be able to buy fully autonomous cars in 2030?"</li>
+                <li>April 2018 - Vehicle Electronics And Connected Services: Speaker on "Perceptron – Deep Neural Networks for Perception in Trucks."</li>
+            </ul>
+        </section>
+        <section id="publications">
+            <h2>Publications</h2>
+            <ul>
+                <li>September 2019: "SalsaNet: Fast Road and Vehicle Segmentation in LiDAR Point Clouds for Autonomous Driving" - Paper accepted at the IEEE Symposium on Intelligent Vehicle 2020. <a href="https://arxiv.org/abs/1909.08291">Read Paper</a></li>
+                <li>October 2019: "Deep Neural Network Compression for Image Classification and Object Detection" - Paper accepted at the ICMLA Conference 2019. <a href="https://arxiv.org/abs/1910.02747">Read Paper</a></li>
+            </ul>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Master of Computer Science</strong> - Politecnico Di Torino, Italy (April 2011) - Graduation grade: 104/110</li>
+                <li><strong>Bachelor of Computer Science</strong> - Politecnico Di Torino, Italy (September 2008) - Graduation grade: 100/110</li>
+                <li><strong>Master Exchange Program</strong> - Chalmers Tekniska H&oumlgskola, Sweden (September 2009 - June 2010)</li>
+            </ul>
+        </section>
+    </div>
+    
+    <div class="timeline">
+        <h3> <strong>Story Line</strong> </h3>
+        <div timeline_html="timeline_sidebar.html"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<script>
+    includeHTML('timeline_html');
+    includeHTML('experience_html');
+    includeHTML('skills_html');
+</script>
